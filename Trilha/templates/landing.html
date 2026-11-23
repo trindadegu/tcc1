@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}trilha — Escuta que vira caminho{% endblock %}
+
+{% block content %}
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="inicio">
+    <div class="site-container header-inner">
+      <a class="brand" href="#inicio" aria-label="trilha — voltar ao início">
+        <img class="brand-mark" src="{% static 'img/logo-completo.png' %}" alt="">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#estudantes">Para estudantes</a>
+        <a href="#perfis-docentes">Perfis docentes</a>
+        <a href="#escolas">Para escolas</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+
+      <a class="button button-primary header-cta" href="#como-funciona">Entrar <span aria-hidden="true">↗</span></a>
+      <details class="mobile-nav">
+        <summary aria-label="Abrir menu de navegação"><span></span><span></span><span></span></summary>
+        <nav aria-label="Navegação móvel">
+          <a href="#estudantes">Para estudantes</a>
+          <a href="#perfis-docentes">Perfis docentes</a>
+          <a href="#escolas">Para escolas</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a href="#como-funciona">Entrar <span aria-hidden="true">↗</span></a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero-section">
+      <div class="site-container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span>ESCUTA QUE VIRA CAMINHO</p>
+          <h1>Sua experiência pode <em>melhorar</em> a próxima aula.</h1>
+          <p class="hero-lede">Um espaço para estudantes compartilharem como aprendem — e para escolas transformarem essas percepções em conversas e melhorias pedagógicas.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#como-funciona">Entenda a proposta <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#perfis-docentes">Conheça os perfis docentes <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="trust-note"><span></span>Avaliações são pontos de partida para compreender experiências — não vereditos.</p>
+        </div>
+
+        <figure class="hero-art-wrap" aria-labelledby="hero-art-caption">
+          <div class="hero-art-orbit" aria-hidden="true"></div>
+          <img class="hero-art" src="{% static 'img/hero.svg' %}" alt="Ilustração editorial de uma prancheta com respostas e marca de verificação verdes, acompanhada por um lápis mostarda.">
+          <div class="hero-note-card">
+            <span>UMA CONVERSA EM CONSTRUÇÃO</span>
+            <strong>Ouvir também ensina.</strong>
+            <i aria-hidden="true"></i>
+          </div>
+          <figcaption id="hero-art-caption">Cada percurso de aprendizagem é feito de muitas vozes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <aside class="principle-banner" id="principio" aria-label="Princípio de leitura">
+      <span class="banner-spark" aria-hidden="true">✳</span>
+      <p>Uma avaliação não resume uma aula. <em>O contexto faz parte da conversa.</em></p>
+      <span class="banner-spark" aria-hidden="true">✳</span>
+    </aside>
+
+    <section class="student-section section-pad" id="estudantes">
+      <div class="site-container student-grid">
+        <div class="student-copy">
+          <p class="eyebrow"><span></span>A EXPERIÊNCIA COMEÇA COM VOCÊ</p>
+          <h2>O que acontece na aula merece ser escutado.</h2>
+          <p class="section-lede">Suas observações ajudam a compor uma visão mais ampla do ensino. O valor está no que se aprende ao olhar para diferentes experiências — não em reduzir uma pessoa a uma nota.</p>
+
+          <div class="numbered-list student-steps">
+            <article class="numbered-item">
+              <span class="item-number">01</span>
+              <div><h3>Compartilhe sua perspectiva</h3><p>Conte como foi aprender: o que ajudou, o que poderia mudar e em qual contexto.</p></div>
+            </article>
+            <article class="numbered-item">
+              <span class="item-number">02</span>
+              <div><h3>Acrescente contexto</h3><p>Uma percepção ganha sentido quando sabemos a que aspecto da experiência ela se refere.</p></div>
+            </article>
+            <article class="numbered-item">
+              <span class="item-number">03</span>
+              <div><h3>Ajude a abrir caminhos</h3><p>O conjunto das avaliações pode apoiar conversas pedagógicas e melhorias na escola.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="profile-scene" aria-label="Perfil docente">
+          <div class="profile-outline" aria-hidden="true"></div>
+          <article class="teacher-card">
+            <div class="teacher-head">
+              <div class="teacher-avatar" aria-hidden="true">LM</div>
+              <div class="teacher-ident"><h3>Luiza Martins</h3><p>Ciências · Ensino Fundamental</p></div>
+            </div>
+            <div class="rating-panel">
+              <div class="rating-main"><strong>4,2</strong><span class="stars" aria-hidden="true">★★★★★</span></div>
+              <div class="rating-label"><strong>Uma leitura entre várias</strong></div>
+            </div>
+            <p class="card-context">Uma nota oferece apenas um recorte. Conhecer o contexto e as diferentes dimensões ajuda a formar uma leitura mais cuidadosa.</p>
+            <div class="dimension-list" aria-label="Dimensões de avaliação">
+              <div class="dimension-row"><div><span>Clareza nas aulas</span><strong>4,3</strong></div><span class="bar-track"><i style="width:86%"></i></span></div>
+              <div class="dimension-row"><div><span>Espaço para dúvidas</span><strong>4,0</strong></div><span class="bar-track"><i style="width:80%"></i></span></div>
+              <div class="dimension-row"><div><span>Ritmo de aprendizagem</span><strong>4,5</strong></div><span class="bar-track"><i style="width:90%"></i></span></div>
+            </div>
+          </article>
+          <span class="scene-sun" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="profiles-section section-pad" id="perfis-docentes">
+      <div class="site-container profiles-grid">
+        <div class="search-scene">
+          <div class="search-frame">
+            <div class="mock-browser">
+              <div class="mock-header">
+                <img class="mini-brand-mark" src="{% static 'img/logo-simbolo.png' %}" alt="">
+                <a href="#perfis-docentes">EXPLORAR PERFIS</a>
+              </div>
+              <div class="search-box">
+                <label class="sr-only" for="teacher-search">Buscar por disciplina ou nome</label>
+                <input id="teacher-search" type="search" placeholder="Busque por disciplina ou nome" readonly aria-readonly="true">
+                <button type="button" aria-label="Buscar por disciplina ou nome" disabled>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 4.2 4.2"></path></svg>
+                </button>
+              </div>
+              <a class="search-result" href="#principio">
+                <span class="question-mark" aria-hidden="true">?</span>
+                <span><strong>Uma consulta com contexto</strong><small>Perfis públicos para conhecer experiências</small></span>
+                <span class="result-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <span class="search-decoration" aria-hidden="true">·</span>
+        </div>
+
+        <div class="profiles-copy">
+          <p class="eyebrow"><span></span>ALÉM DA PRIMEIRA IMPRESSÃO</p>
+          <h2>Perfis públicos para conhecer, não para rotular.</h2>
+          <p class="section-lede">Os perfis docentes apresentam avaliações como parte de uma conversa maior sobre a experiência de aprender. Consulte as dimensões e considere que toda pontuação mostra só um recorte.</p>
+          <ul class="principle-list">
+            <li><span aria-hidden="true">↗</span>Veja as avaliações em relação ao que está sendo observado.</li>
+            <li><span aria-hidden="true">↗</span>Use a nota como referência inicial, nunca como retrato completo.</li>
+            <li><span aria-hidden="true">↗</span>Reconheça que contextos e experiências podem ser diferentes.</li>
+          </ul>
+          <a class="text-link context-link" href="#principio">Por que contexto importa? <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section" aria-labelledby="quote-heading">
+      <div class="site-container quote-grid">
+        <div class="quote-label">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p id="quote-heading">UMA IDEIA PARA LEVAR COM VOCÊ</p>
+        </div>
+        <figure class="quote-copy">
+          <blockquote>“Uma nota é uma pergunta para aprofundar — não uma resposta definitiva sobre quem ensina.”</blockquote>
+          <figcaption>Princípio de leitura da TRILHA. Não é um depoimento de estudante.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="schools-section section-pad" id="escolas">
+      <div class="site-container schools-grid">
+        <div class="schools-copy">
+          <p class="eyebrow"><span></span>UMA ESCUTA QUE VOLTA PARA A ESCOLA</p>
+          <h2>Avaliar também é aprender a melhorar.</h2>
+          <p class="section-lede">Para escolas, as avaliações podem contribuir com a avaliação interna e apoiar reflexões pedagógicas. A intenção é olhar para padrões e possibilidades de desenvolvimento, com responsabilidade e espaço para contexto.</p>
+          <div class="school-benefits">
+            <div><span>01</span><p>Reunir percepções de estudantes como insumo para a conversa pedagógica.</p></div>
+            <div><span>02</span><p>Identificar aspectos da experiência de aprendizagem que merecem atenção.</p></div>
+            <div><span>03</span><p>Usar a avaliação interna para orientar possibilidades de melhoria.</p></div>
+          </div>
+        </div>
+
+        <div class="school-card-wrap">
+          <article class="school-card">
+            <h3>Perguntas que ajudam a escola a escutar</h3>
+            <div class="reflection-prompt"><span>01</span><p>O que está funcionando?</p><i aria-hidden="true">↗</i></div>
+            <div class="reflection-prompt"><span>02</span><p>Onde há espaço para evoluir?</p><i aria-hidden="true">↗</i></div>
+            <div class="school-card-bottom">
+              <div class="decor-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </article>
+          <span class="school-shadow" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section section-pad" id="como-funciona">
+      <div class="site-container">
+        <div class="process-heading">
+          <div><p class="eyebrow"><span></span>UM PERCURSO EM TRÊS TEMPOS</p><h2>Escutar. Refletir. Aprimorar.</h2></div>
+          <p>Um ciclo para manter a experiência dos estudantes próxima das decisões pedagógicas.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step"><span class="process-number">01</span><h3>Experiência</h3><p>Estudantes compartilham suas percepções sobre as aulas e o processo de aprendizagem.</p></article>
+          <article class="process-step"><span class="process-number">02</span><h3>Leitura</h3><p>As avaliações são consideradas em conjunto, com atenção ao contexto de cada experiência.</p></article>
+          <article class="process-step"><span class="process-number">03</span><h3>Melhoria</h3><p>Escolas podem usar esse insumo em sua avaliação interna e em conversas pedagógicas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-pad" id="duvidas">
+      <div class="site-container faq-grid">
+        <div class="faq-intro"><p class="eyebrow"><span></span>DÚVIDAS HONESTAS</p><h2>Antes de seguir o caminho.</h2><p>Uma ferramenta de avaliação precisa ser compreendida com cuidado.</p></div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Uma nota define se um professor é bom?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Não. Uma avaliação é um ponto de partida para compreender experiências — não um veredito sobre quem ensina. O contexto e as diferentes dimensões ajudam a compor uma leitura mais cuidadosa.</p></details>
+          <details class="faq-item"><summary>Para que servem as avaliações dos estudantes?<span class="faq-plus" aria-hidden="true">+</span></summary><p>As percepções podem compor uma visão mais ampla da experiência de aprendizagem e apoiar conversas pedagógicas e melhorias na escola.</p></details>
+          <details class="faq-item"><summary>O que encontro em um perfil docente?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Os perfis apresentam avaliações relacionadas a dimensões específicas. Toda pontuação mostra apenas um recorte, não um retrato completo de quem ensina.</p></details>
+          <details class="faq-item"><summary>Como a TRILHA trata as avaliações?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Como sinais para iniciar conversas respeitosas e contextualizadas, reconhecendo que diferentes experiências de aprendizagem podem coexistir.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-heading">
+      <div class="cta-arcs" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="site-container final-content">
+        <p class="eyebrow eyebrow-light"><span></span>O PRÓXIMO PASSO COMEÇA OUVINDO</p>
+        <h2 id="final-heading">Mais escuta pode abrir espaço para uma aula melhor.</h2>
+        <a class="button button-light" href="#inicio">Voltar ao início <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container footer-grid">
+      <a class="brand footer-brand" href="#inicio" aria-label="trilha — voltar ao início">
+        <img class="brand-mark" src="{% static 'img/logo-texto.png' %}" alt="">
+      </a>
+      <p class="footer-signoff">Escuta respeitosa.<br>Aprendizagem em movimento.</p>
+    </div>
+  </footer>
+{% endblock %}
